@@ -32,6 +32,6 @@ jobs:
           CHANNEL_OR_GROUP_ID: ${{ secrets.CHANNEL_OR_GROUP_ID }}
           MESSAGE_ID: ${{ secrets.MESSAGE_ID }}
           BOT_ADMIN_IDS: ${{ secrets.BOT_ADMIN_IDS }}
-          TIME_ZONE: "Asia/Jakarta"
+          TIME_ZONE: "Asia/Tokyo"
           TIME_FORMAT: "%A, %d %B %Y - %H:%M:%S WIB"
           
