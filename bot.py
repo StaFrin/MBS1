@@ -29,7 +29,7 @@ async def main_teletips():
     async with app:
         while True:
             print("Checking...")
-            xxx_teletips = f"📈 | **Source Please Bot Status**\n\n"
+            xxx_teletips = f"📈 | **𝚂𝚘𝚞𝚛𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝙱𝚘𝚝𝚜 𝚂𝚝𝚊𝚝𝚞𝚜**\n\n"
             for bot in BOT_LIST:
                 name = await app.get_chat(bot)
                 try:
@@ -40,7 +40,7 @@ async def main_teletips():
                     async for ccc in zzz_teletips:
                         bbb = ccc.id
                     if aaa == bbb:
-                        xxx_teletips += f"• ❌ [{name.first_name}](https://t.me/{bot})\n"
+                        xxx_teletips += f"🤖• [{name.first_name}](https://t.me/{bot}) ❌️ \n"
                         for bot_admin_id in BOT_ADMIN_IDS:
                             try:
                                 await app.send_message(
@@ -51,13 +51,13 @@ async def main_teletips():
                                 pass
                         await app.read_chat_history(bot)
                     else:
-                        xxx_teletips += f"• ✅ [{name.first_name}](https://t.me/{bot})\n"
+                        xxx_teletips += f"🤖• [{name.first_name}](https://t.me/{bot}) ✅️ \n"
                         await app.read_chat_history(bot)
                 except FloodWait as e:
                     await asyncio.sleep(e.x)
             time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
             last_update = time.strftime(f"{TIME_FORMAT}")
-            xxx_teletips += f"\n📶 **Last Checked:** {last_update} - {TIME_ZONE}\n\n⚡️ **Powered by @SourcePleaseOfficial**"
+            xxx_teletips += f"\n📶 **Last Checked:** {last_update} - {TIME_ZONE}\n\n⏰️ **𝙱𝚘𝚝𝚜 𝚜𝚝𝚊𝚝𝚞𝚜 𝚊𝚛𝚎 𝚊𝚞𝚝𝚘-𝚞𝚙𝚍𝚊𝚝𝚎𝚍 𝚎𝚟𝚎𝚛𝚢 3 𝚑𝚘𝚞𝚛𝚜.**\n\n⚡️ **𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 @SourcePleaseOfficial**"
             print(f"Last Checked on: {last_update}")
             return await app.edit_message_text(
                 int(CHANNEL_OR_GROUP_ID),
